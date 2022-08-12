@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  /* font family not working */
+  font-family: 'hobbitonbrushhand';
+  color: white;
+}
+
 .brand-logo {
   margin-left: 15px;
 }
@@ -17,4 +24,29 @@
 
 .collection-item form {
   margin-top: -5px;
+}
+
+#body {         
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+body > nav {
+  background-color: #3e3e3e;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  height: 50px;
+  width: calc(100% + 16px);
+  align-items: center;
+}
+
+.welcome {
+  display: flex;
+  font-size: 50px;
+  color: #3b5e26
+  justify-content: space-around;
 }
