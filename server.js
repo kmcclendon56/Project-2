@@ -12,6 +12,7 @@ const indexRoutes = require('./routes/index');
 
 
 const homeRouter = require('./routes/homes');
+const newJourneyRouter = require('.router/newjourneys');
 
 // create the Express app
 const app = express();
@@ -53,6 +54,7 @@ app.use(function (req, res, next) {
 
 // mount all routes with appropriate base paths
 app.use('/', homeRouter);
+app.use('/', newJourneyRouter);
 
 
 

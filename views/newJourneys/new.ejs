@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<form id="add-new-journey" action="/newjourneys" method="POST">
+  <label>Where:</label>
+  <input type="text" name="where">
+  <label>Favorite Restaurant:</label>
+  <input type="text" name="restaurant">
+  <label>Favorite Spot:</label>
+  <input type="text" name="spot">
+  <label>Add a Pic?:<br> To add a picture please upload it to imgur and
+    then copy the image address and paste it in the input box.
+</label>
+  <input type="text" name="picture">
+  <input type="submit" value="Add Journey">
+</form>
+
+<%- include('../partials/footer') %>
