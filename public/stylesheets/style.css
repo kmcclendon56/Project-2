@@ -3,6 +3,7 @@
   /* font family not working */
   font-family: 'hobbitonbrushhand';
   color: white;
+  background-color: #3e3e3e;
 }
 
 .brand-logo {
@@ -45,8 +46,14 @@ body > nav {
 }
 
 .welcome {
+  position: absolute;
   display: flex;
   font-size: 50px;
-  color: #3b5e26
-  justify-content: space-around;
+  color: #3b5e26;
+  background-color: transparent;
+}
+
+main img{
+  height: 900px;
+  width: calc(100% + 16px);
 }
