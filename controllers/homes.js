@@ -6,7 +6,6 @@ module.exports = {
 
 function index(req,res){
     res.render("homes/index.ejs")
-    //return res.render("homes/index.ejs")
 };
 
 
