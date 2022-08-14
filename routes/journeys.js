@@ -6,5 +6,6 @@ const home = require('../models/home');
 
 
 router.post('/journeys', isLoggedIn, homeController.create);
+router.get('/:id', homeController.show);
 
 module.exports = router;
