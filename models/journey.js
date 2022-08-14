@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const newJourneySchema = new mongoose.Schema({
+const journeySchema = new mongoose.Schema({
     where: String,
     restaurant: String,
     spot: String,
@@ -8,4 +8,4 @@ const newJourneySchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model("newjourney", newJourneySchema);
+module.exports = mongoose.model("journey", journeySchema);

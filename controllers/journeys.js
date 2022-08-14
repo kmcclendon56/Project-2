@@ -1,17 +1,17 @@
-const newJourney = require("../models/newjourney");
+const Journey = require("../models/journey");
 
 module.exports = {
     create,
-    new: addNewJourney
+    new: newJourney
 };
 
 
-function addNewJourney(req, res) {
+function newJourney(req, res) {
     res.render("journeys/new.ejs");
   }
 
 async function create (req, res){
-    newJourney.create(req.body, function (err, journeyCreated){
+    Journey.create(req.body, function (err, journeyCreated){
         if (err) {
             return res.render('journeys/new.ejs');
         }

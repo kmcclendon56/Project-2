@@ -5,6 +5,6 @@ const isLoggedIn = require('../config/auth');
 const home = require('../models/home');
 
 
-router.post('/newjourneys', isLoggedIn, homeController.create);
+router.post('/journeys', isLoggedIn, homeController.create);
 
 module.exports = router;
