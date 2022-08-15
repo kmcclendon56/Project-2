@@ -3,7 +3,8 @@ const journeys = require("./journeys");
 
 module.exports = {
     create,
-    edit: editBlog
+    edit: editBlog,
+    delete: deleteBlog
 };
 
 function create (req, res){
@@ -22,6 +23,17 @@ function editBlog(req, res) {
       const blogSubdoc = journey.blogs.id(req.params.id);
       if (!blogSubdoc.userId.equals(req.user._id)) return res.redirect(`/jouneys/${journeys._id}`);
       blogSubdoc.text = req.body.text;
+      journeys.save(function(err) {
+        res.redirect(`/journeys/${journeys._id}`);
+      });
+    });
+  }
+
+  function deleteBlog(req, res) {
+    Journey.findOne({'blogs._id': req.params.id}, function(err, journey) {
+      const blogSubdoc = journey.blogs.id(req.params.id);
+      if (!blogSubdoc.userId.equals(req.user._id)) return res.redirect(`/jouneys/${journeys._id}`);
+      commentSubdoc.remove();
       journeys.save(function(err) {
         res.redirect(`/journeys/${journeys._id}`);
       });

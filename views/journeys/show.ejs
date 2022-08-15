@@ -14,7 +14,27 @@
     <button type="submit">Add Blog Post</button>
 </form>
 
+<form action="/journeys/<%= journeys._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Journey</button>
+  </form>
+
 <form action="/blogs/<%= journeys._id %>?_method=PUT" method="POST">
     <input name="text" value="<%= blogs.text %>">
     <button type="submit">Update Blog Entry</button>
   </form>
+
+
+<% journey.blogs.forEach(function(blogs) { %>
+ <div class="blog">
+    <%= blogs.text %><br>
+    <% if (blogs.userId.equals(user._id)) { %>
+        <form action="/blogs/<%= blogs._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Blog Post</button>
+     </form>
+    <% } %>
+ </div>
+<% }) %>
+
+<form action="/blogs/<%= journeys._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Blog Post</button>
+</form>

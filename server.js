@@ -8,11 +8,12 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
-const indexRoutes = require('./routes/index');
 
 
+const indexRouter = require('./routes/index');
 const homeRouter = require('./routes/homes');
 const journeyRouter = require('.router/journeys');
+
 
 // create the Express app
 const app = express();
@@ -55,6 +56,7 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', homeRouter);
 app.use('/', journeyRouter);
+app.use('/', indexRouter);
 
 
 
