@@ -2,7 +2,8 @@ const Journey = require("../models/journey");
 
 module.exports = {
     create,
-    new: newJourney
+    new: newJourney,
+    show
 };
 
 
@@ -17,4 +18,17 @@ async function create (req, res){
         }
         res.redirect(`/journeys/${journeyCreated._id}`);
     });
+}
+
+//show function will not show picture yet just the title
+async function show(req, res){
+    try{
+        const journeyDocument = await Journey.findById(req.params.id)
+            .exec()
+        res.render("journeys/show.ejs", {
+            journey: journeyDocument
+        });
+    }catch(err){
+        res.send(err)
+    }
 }
