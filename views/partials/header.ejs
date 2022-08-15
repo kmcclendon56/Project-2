@@ -9,10 +9,13 @@
 </head>
 <body>
     <nav>
-    <a href="/" class="home">HOME</a>
-    <!-- placeholder for if user signs in(home, add new journey, journey, logout) -->
-    <a href="/logout"> LOG OUT</a>
-    <!-- else placeholder for if user has not logged in -->
-    <a href="/auth/google" class="login">LOG IN</a>
+    <% if (user) { %>
+        <a href="/" class="home">HOME</a>
+        <!-- placeholder for if user signs in(home, add new journey, journey, logout) -->
+        <a href="/journeys">Journeys</a>
+        <a href="/logout"> LOG OUT</a>
+    <% } else{ %>}
+        <a href="/auth/google" class="login">LOG IN</a>
+    <% } %>
     </nav> 
 <main>
