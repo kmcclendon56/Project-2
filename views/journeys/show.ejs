@@ -1,5 +1,6 @@
 <!-- where we will show the place journeyed and the corresponding picture -->
-<%- include('../partials/header') %>
+<div class= “header-image”>
+</div>
 
 <section id="show-page">
     <div>Where: </div>
@@ -7,3 +8,13 @@
     <!-- show pic here -->
     <!-- <%= image variable %>  -->
 </section>
+
+<form action="/journeys/<%= journeys._id %>/blogs" method ="POST">
+    <input name=""text>
+    <button type="submit">Add Blog Post</button>
+</form>
+
+<form action="/blogs/<%= journeys._id %>?_method=PUT" method="POST">
+    <input name="text" value="<%= blogs.text %>">
+    <button type="submit">Update Blog Entry</button>
+  </form>

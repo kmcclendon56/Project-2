@@ -1,5 +1,5 @@
 const Home = require("../models/home");
-const journey = require("../models/journey");
+const Journey = require("../models/journey");
 
 module.exports = {
     index,

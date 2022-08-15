@@ -57,3 +57,8 @@ main img{
   height: 900px;
   width: calc(100% + 12px);
 }
+
+
+.header-image {
+  background-image: url(“https://i.imgur.com/yZOYf0P.jpg”);
+  }
