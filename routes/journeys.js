@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 const homeController = require('../controllers/homes');
 const isLoggedIn = require('../config/auth');
-const home = require('../models/home');
+const journeyController = require("../controllers/journeys");
 
 
-router.post('/journeys', isLoggedIn, homeController.create);
-router.get('/:id', homeController.show);
+router.post('/journeys', isLoggedIn, journeyController.create);
+router.get('/home/:id', homeController.show);
 
 module.exports = router;

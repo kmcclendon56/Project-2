@@ -27,7 +27,7 @@
 <% journey.blogs.forEach(function(blogs) { %>
  <div class="blog">
     <%= blogs.text %><br>
-    <% if (blogs.userId.equals(user._id)) { %>
+    <% if (blogs.userID.equals(user._id)) { %>
         <form action="/blogs/<%= blogs._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete Blog Post</button>
      </form>

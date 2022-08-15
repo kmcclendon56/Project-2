@@ -14,10 +14,11 @@ function index(req,res){
 //show function will not show picture yet just the title
 async function show(req, res){
     try{
-        const journeyDocument = await journey.findById(req.params.id)
+        const journeyDocument = await Journey.findById(req.params.id)
         .exec()
         res.render("journey/show", {
-            where: ""
+            //fix where
+            where: " "
         });
     }catch(err){
         res.send(err)

@@ -12,7 +12,7 @@ const methodOverride = require('method-override');
 
 const indexRouter = require('./routes/index');
 const homeRouter = require('./routes/homes');
-const journeyRouter = require('.router/journeys');
+const journeyRouter = require('./routes/journeys');
 
 
 // create the Express app
