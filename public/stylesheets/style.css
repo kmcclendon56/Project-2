@@ -2,8 +2,8 @@
   box-sizing: border-box;
   /* font family not working */
   font-family: 'hobbitonbrushhand';
-  color: white;
-  background-color: #3e3e3e;
+  color: #3b5e26;
+  background-color: rgb(216, 223, 230 );
 }
 
 .brand-logo {
@@ -36,12 +36,12 @@
 }
 
 body > nav {
-  background-color: #3e3e3e;
+  background-color: rgb(216, 223, 230 );
   display: flex;
   justify-content: space-between;
   font-size: 25px;
   height: 50px;
-  width: calc(100% + 12px);
+  width: calc(100% + 5px);
   align-items: center;
 }
 
@@ -55,7 +55,7 @@ body > nav {
 
 main img{
   height: 900px;
-  width: calc(100% + 12px);
+  width: 100%;
 }
 
 
