@@ -1,12 +1,13 @@
 <!-- where we will show the place journeyed and the corresponding picture -->
+<div>
+    <img class="navImage" src="https://i.imgur.com/yZOYf0P.jpg" />
+</div>
 <%- include('../partials/header') %>
-<section id="show-page">
-</section>
 
 <% journeys.forEach(journey => { %>
 
         <a href="/journeys/<%= journey._id %>"><%= journey.where%></a>
 
         <img src="<%= journey.image%>" alt="image" href="/journeys/<%= journey._id %>">
-    
+
    <% }) %>
