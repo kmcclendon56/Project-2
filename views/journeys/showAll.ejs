@@ -6,7 +6,7 @@
 <% journeys.forEach(journey => { %>
 
         <a href="/journeys/<%= journey._id %>"><%= journey.where%></a>
-        <!-- show pic here -->
-        <!-- image variable -->
 
+        <img src="<%= journey.image%>" alt="image" href="/journeys/<%= journey._id %>">
+    
    <% }) %>

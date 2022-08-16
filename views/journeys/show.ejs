@@ -3,11 +3,17 @@
 <div class= “header-image”>
 </div>
 
+<thead>
+<th> <%= journey.where%> 
+    <%= journey.restaurant %>
+    <%= journey.spot %>
+</th>
+</thead>
+
 <form action="/journeys/<%= journey._id %>/blogs" method="POST">
     <input name="content">
     <button type="submit">Add Blog Post</button>
 </form>
-
 
 
 <% journey.blogs.forEach(blog => {  %>
