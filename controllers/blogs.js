@@ -19,35 +19,15 @@ function create (req, res){
 }
 
 function editBlog(req, res) {
-  // try {
-  //   const journeyDocument = await Journey.findOne({
-  //       'blogs._id': req.params.id,
-  //   })
-  //   if (!journeyDocument) return res.redirect('/journeys');
-
-  //   const blogSubdoc = journeyDocument.blogs.id(req.params.id)
-
-  //   if (!blogSubdoc.userID.equals(req.user._id)) return res.redirect(`/jouneys/${journeys._id}`);
-  //   blogSubdoc.text = req.body.text;
-  //   journeys.save(function(err) {
-  //     res.redirect(`/journeys/${journeys._id}`);
-  //   });
-  // } catch(err) {
-  //   console.log(err)
-  //   res.send(err)
-  // }
-
-
-
     Journey.findOne({'blogs._id': req.params.id}, function(err, journey) {
       const blogSubdoc = journey.blogs.id(req.params.id);
-      // if (!blogSubdoc.userID.equals(req.user._id)) return res.redirect(`/jouneys/${journeys._id}`);
       blogSubdoc.content = req.body.content;
       journey.save(function(err) {
         res.redirect(`/journeys/${journey._id}`);
       });
     });
   }
+
 
   async function deleteBlog(req, res) {
     try {
