@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const blogSchema = new mongoose.Schema(
     {
+    content: String,
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}, //<- we want to make sure a review is always tied to a user
     userName: String
     }

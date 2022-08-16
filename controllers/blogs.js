@@ -32,7 +32,7 @@ function editBlog(req, res) {
   function deleteBlog(req, res) {
     Journey.findOne({'blogs._id': req.params.id}, function(err, journey) {
       const blogSubdoc = journey.blogs.id(req.params.id);
-      if (!blogSubdoc.userID.equals(req.user._id)) return res.redirect(`/jouneys/${journeys._id}`);
+      if (!blogSubdoc.user === req.user._id) return res.redirect(`/jouneys/${journeys._id}`);
       commentSubdoc.remove();
       journeys.save(function(err) {
         res.redirect(`/journeys/${journeys._id}`);

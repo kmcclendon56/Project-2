@@ -3,32 +3,30 @@
 <div class= “header-image”>
 </div>
 
-<form action="/journeys/<%= newJourney._id %>/blogs" method="POST">
-    <input name="text">
+<form action="/journeys/<%= journey._id %>/blogs" method="POST">
+    <input name="content">
     <button type="submit">Add Blog Post</button>
 </form>
 
-<form action="/journeys/<%= newJourney._id %>?_method=DELETE" method="POST">
+<form action="/journeys/<%= journey._id %>" method="DELETE">
     <button type="submit">Delete Journey</button>
   </form>
 
-<form action="/blogs/<%= newJourney._id %>?_method=PUT" method="POST">
-    <input name="text" value="<%= blogs.text %>">
-    <button type="submit">Update Blog Entry</button>
-  </form>
 
 
-<% journeys.blogs.forEach(function(blogs) { %>
+
+<% journey.blogs.forEach(blog => {  %>
  <div class="blog">
-    <%= blogs.text %><br>
-    <% if (blogs.userID.equals(user._id)) { %>
-        <form action="/blogs/<%= blogs._id %>?_method=DELETE" method="POST">
+    <%= blog.text %><br>
+    <h1><%= blog.content %></h1>
+    <h1><%= blog.userName %></h1>
+    <form action="/blogs/<%= blog._id %>" method="DELETE">
         <button type="submit">Delete Blog Post</button>
-     </form>
-    <% } %>
+        </form>
+    <form action="/blogs/<%= journey._id %>" method="POST">
+        <input name="text" value="<%= blog.text %>">
+        <button type="submit">Update Blog Entry</button>
+        </form>
  </div>
 <% }) %>
 
-<form action="/blogs/<%= newJourney._id %>?_method=DELETE" method="POST">
-    <button type="submit">Delete Blog Post</button>
-</form> -->
