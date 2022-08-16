@@ -3,7 +3,38 @@
 </div>
 <%- include('../partials/header') %>
 
+
 <form id="add-journey" action="/newJourneys" method="POST">
+  <div>
+      <label for="where" class="control-label col-sm-2">Where: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="where" placeholder="Where">
+      </div>
+  </div>
+  <div>
+      <label for="restaurant" class="control-label col-sm-2">Favorite Restaurant: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="restaurant" placeholder="Favorite Restaurant">
+      </div>
+  </div>
+  <div>
+      <label for="spot" class="control-label col-sm-2">Favorite Spot: </label>
+      <div class="col-sm-10">
+       <input type="text" class="form-control" id="spot" placeholder="Favorite Spot">
+      </div>
+  </div>
+  <div>
+      <label for="pic" class="control-label col-sm-2">Add a Pic: </label>
+      <div class="col-sm-10">
+       <input type="text" class="form-control" id="pic" placeholder="Add a Pic"> <br>
+       To add a picture please upload it to imgur and
+    then copy the image address and paste it in the input box.
+      </div>
+      <input type="submit" value="Add Journey">
+  </div>
+</form>
+
+<!-- <form id="add-journey" action="/newJourneys" method="POST">
   <label>Where:</label>
   <input type="text" name="where">
   <label>Favorite Restaurant:</label>
@@ -15,6 +46,6 @@
   </label>
   <input type="text" name="image">
   <input type="submit" value="Add Journey">
-</form>
+</form>  -->
 
 <%- include('../partials/footer') %>
