@@ -7,6 +7,5 @@ const newJourneyController = require("../controllers/newJourneys");
 
 router.get('/newJourneys', isLoggedIn, newJourneyController.new)
 router.post('/newJourneys', isLoggedIn, newJourneyController.create);
-router.get('/newJourneys/:id', isLoggedIn, newJourneyController.show);
 
 module.exports = router;

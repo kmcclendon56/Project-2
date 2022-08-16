@@ -8,11 +8,6 @@
     <button type="submit">Add Blog Post</button>
 </form>
 
-<form action="/journeys/<%= journey._id %>" method="DELETE">
-    <button type="submit">Delete Journey</button>
-  </form>
-
-
 
 
 <% journey.blogs.forEach(blog => {  %>
@@ -20,11 +15,11 @@
     <%= blog.text %><br>
     <h1><%= blog.content %></h1>
     <h1><%= blog.userName %></h1>
-    <form action="/blogs/<%= blog._id %>" method="DELETE">
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete Blog Post</button>
         </form>
-    <form action="/blogs/<%= journey._id %>" method="POST">
-        <input name="text" value="<%= blog.text %>">
+    <form action="/blogs/<%= blog._id %>" method="POST">
+        <input name="content" value="<%= blog.content %>">
         <button type="submit">Update Blog Entry</button>
         </form>
  </div>
