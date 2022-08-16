@@ -1,20 +1,14 @@
 <!-- where we will show the place journeyed and the corresponding picture -->
+<%- include('../partials/header') %>
 <div class= “header-image”>
 </div>
 
-<section id="show-page">
-    <div>Where: </div>
-    <div><%= newJourney.where %> </div>
-    <!-- show pic here -->
-    <!-- <%= image variable %>  -->
-</section>
-
-<form action="/newJourneys/<%= newJourney._id %>/blogs" method ="POST">
-    <input name=""text>
+<form action="/journeys/<%= newJourney._id %>/blogs" method="POST">
+    <input name="text">
     <button type="submit">Add Blog Post</button>
 </form>
 
-<form action="/newJourneys/<%= newJourney._id %>?_method=DELETE" method="POST">
+<form action="/journeys/<%= newJourney._id %>?_method=DELETE" method="POST">
     <button type="submit">Delete Journey</button>
   </form>
 
@@ -24,7 +18,7 @@
   </form>
 
 
-<!-- <% journey.blogs.forEach(function(blogs) { %>
+<% journeys.blogs.forEach(function(blogs) { %>
  <div class="blog">
     <%= blogs.text %><br>
     <% if (blogs.userID.equals(user._id)) { %>
@@ -33,8 +27,8 @@
      </form>
     <% } %>
  </div>
-<% }) %> -->
+<% }) %>
 
 <form action="/blogs/<%= newJourney._id %>?_method=DELETE" method="POST">
     <button type="submit">Delete Blog Post</button>
-</form>
+</form> -->

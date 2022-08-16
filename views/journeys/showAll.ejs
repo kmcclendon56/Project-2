@@ -1,0 +1,14 @@
+<!-- where we will show the place journeyed and the corresponding picture -->
+<%- include('../partials/header') %>
+<section id="show-page">
+</section>
+
+<% journeys.forEach(journey => { %>
+
+        <div>Where: </div>
+        <div><%= journey.where %> </div>
+        <a href="/journeys/<%= journey._id %>">DETAILS</a>
+        <!-- show pic here -->
+        <!-- image variable -->
+
+   <% }) %>

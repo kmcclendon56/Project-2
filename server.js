@@ -13,6 +13,7 @@ const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const homeRouter = require('./routes/homes');
 const newJourneyRouter = require('./routes/newJourneys');
+const journeyRouter = require('./routes/journeys')
 
 
 // create the Express app
@@ -57,6 +58,7 @@ app.use(function (req, res, next) {
 app.use('/', homeRouter);
 app.use('/', newJourneyRouter);
 app.use('/', indexRouter);
+app.use('/journeys', journeyRouter);
 
 
 
