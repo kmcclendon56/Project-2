@@ -4,10 +4,12 @@
 </div>
 <%- include('../partials/header') %>
 
+<div class="container" style="margin-top: 5vw;">
 <% journeys.forEach(journey => { %>
+    <a class="where" href="/journeys/<%= journey._id %>"><%= journey.where%></a>
+    <img src="<%= journey.image%>" alt="image" href="/journeys/<%= journey._id %>" style="width: 200px; height: 200px;">
+<% }) %>
+</div>
 
-        <a href="/journeys/<%= journey._id %>"><%= journey.where%></a>
 
-        <img src="<%= journey.image%>" alt="image" href="/journeys/<%= journey._id %>">
-
-   <% }) %>
+  
