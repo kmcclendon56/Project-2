@@ -33,7 +33,9 @@ body > main {
   height: 100%;
   overflow: hidden;
   margin: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,1) 33%, rgba(216,223,230,1) 83%);
 }
+/* #3b5e26, #224459, #565902, #3E4001,  #252601, , #D9C7C1, #e7e9ec  */
 
 #body {         
     position:fixed;
