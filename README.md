@@ -31,6 +31,7 @@ https://kmcclendon56.github.io/Tamagotchi/
 * Add a list function for future trips.
 * Move the edit blog and delete blog buttons.
 * Change the font.
+* Change how to upload images
 ## Credit
 * Google
 * Imgur
