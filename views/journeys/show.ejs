@@ -24,18 +24,17 @@
     <% journey.blogs.forEach(blog=> { %>
         <div class="blog">
             <%= blog.text %><br>
-                <h1>
-                    <%= blog.content %>
-                </h1>
-                <h1>
+                <h3>
                     <%= blog.userName %>
-                </h1>
-                <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
-                    <button type="submit">Delete Blog Post</button>
-                </form>
+                </h3>
                 <form action="/blogs/<%= blog._id %>" method="POST">
-                    <input name="content" value="<%= blog.content %>">
-                    <button type="submit">Update Blog Entry</button>
+                    <textarea
+                        rows="5" cols="60" name="content" value="<%= blog.content %>" style="margin-top: 1vw; margin-left: 30vw;"><%= blog.content %></textarea> <br>
+                    <br>
+                    <button style="margin-left: 43vw;" type="submit">Update Blog Entry</button>
+                </form>
+                <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                    <button style="margin-left: 44vw; margin-top: 1vw;" type="submit">Delete Blog Post</button>
                 </form>
         </div>
         <% }) %>
