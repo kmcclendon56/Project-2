@@ -27,27 +27,27 @@
   margin-top: -5px;
 }
 
-body > main {
+body>main {
   width: 100%;
   height: 100%;
   overflow: hidden;
   margin: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,1) 33%, rgba(216,223,230,1) 83%);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 1) 33%, rgba(216, 223, 230, 1) 83%);
 }
 
 
-#body {         
-    position:fixed;
-    top:0px;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    border: black;
-    border-style: solid;
+#body {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: black;
+  border-style: solid;
 }
 
-body > nav {
-  background-image: radial-gradient(circle, rgba(255,255,255,1) 33%, rgba(216,223,230,1) 83%);
+body>nav {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 1) 33%, rgba(216, 223, 230, 1) 83%);
   display: flex;
   justify-content: space-evenly;
   font-size: 25px;
@@ -66,33 +66,33 @@ body > nav {
   background-color: transparent;
 }
 
-main img{
+main img {
   height: 900px;
   width: 100%;
 }
 
-.navImage{
-  object-fit: cover; 
+.navImage {
+  object-fit: cover;
   width: 100%;
   height: 150px;
 }
 
-.containter{
+.containter {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-#box{
-  margin:0 auto; 
+#box {
+  margin: 0 auto;
   padding: 20px;
   background: rgb(216, 223, 230);
-  border: 2px solid #333; 
+  border: 2px solid #333;
 }
 
 .button {
-  background-image: linear-gradient(#3b5e26 ,#e7e9ec);
-  border-color:rgb(216, 223, 230);
+  background-image: linear-gradient(#3b5e26, #e7e9ec);
+  border-color: rgb(216, 223, 230);
   border-style: solid;
   border-width: 1px;
   border-radius: 3px;
@@ -101,7 +101,7 @@ main img{
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "Amazon Ember",Arial,sans-serif;
+  font-family: "Amazon Ember", Arial, sans-serif;
   font-size: 14px;
   height: 29px;
   font-size: 13px;
@@ -135,7 +135,7 @@ main img{
   outline: 0;
 }
 
-.where{
+.where {
   position: absolute;
   color: #3b5e26;
   font-size: 20px;
@@ -144,12 +144,12 @@ main img{
 }
 
 
-.inputs{
+.inputs {
   display: flex;
   justify-content: center;
 
 }
 
-button{
-  background-image: linear-gradient(#bcbcbc ,#e7e9ec);
+button {
+  background-image: linear-gradient(#bcbcbc, #e7e9ec);
 }

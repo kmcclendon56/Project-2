@@ -4,36 +4,36 @@
 <%- include('../partials/header') %>
 
 
-<div class="container-fluid" id="box" style="width: 50vw; margin-left : 40vw; margin-top: 5vw; width:400px;">
-  <form id="add-journey" action="/newJourneys" method="POST">
-    <div>
+  <div class="container-fluid" id="box" style="width: 50vw; margin-left : 40vw; margin-top: 5vw; width:400px;">
+    <form id="add-journey" action="/newJourneys" method="POST">
+      <div>
         <label for="where">Where: </label>
         <div class="col-sm-10">
-          <input type="text" class="form-control"  name="where" placeholder="Where">
+          <input type="text" class="form-control" name="where" placeholder="Where">
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
         <label for="restaurant">Favorite Restaurant: </label>
         <div class="col-sm-10">
           <input type="text" class="form-control" name="restaurant" placeholder="Favorite Restaurant">
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
         <label for="spot">Favorite Spot: </label>
         <div class="col-sm-10">
-        <input type="text" class="form-control" name="spot" placeholder="Favorite Spot">
+          <input type="text" class="form-control" name="spot" placeholder="Favorite Spot">
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
         <label for="pic">Add a Pic: </label>
         <div class="col-sm-10">
-        <input type="text" class="form-control" name="image" placeholder="Add a Pic"> <br>
-        To add a picture please upload it to imgur and
-      then copy the image address and paste it in the input box.
+          <input type="text" class="form-control" name="image" placeholder="Add a Pic"> <br>
+          To add a picture please upload it to imgur and
+          then copy the image address and paste it in the input box.
         </div>
-    <button class="button" role="button">Add Journey</button>
-    </div>
-  </form>
-</div>
+        <button class="button" role="button">Add Journey</button>
+      </div>
+    </form>
+  </div>
 
-<%- include('../partials/footer') %>
+  <%- include('../partials/footer') %>

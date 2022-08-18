@@ -10,50 +10,50 @@ module.exports = {
     delete: deleteJourney
 }
 
-async function createBlog (req, res){
-    try{
+async function createBlog(req, res) {
+    try {
         const journeyDocument = await Journey.findById(req.params.id)
         journeyDocument.blogs.addToSet(req.body);
         journeyDocument.save();
         res.redirect(`/journeys/${journeyDocument._id}`);
-    }catch(err){
+    } catch (err) {
         res.send(err)
     }
 }
 
-async function show(req, res){
-    try{
+async function show(req, res) {
+    try {
         const journeyDocument = await Journey.findById(req.params.id)
             .exec()
         console.log(journeyDocument)
         res.render("journeys/show.ejs", {
             journey: journeyDocument
         });
-    }catch(err){
+    } catch (err) {
         res.send(err)
     }
 }
 
-async function showAll(req, res){
-    try{
+async function showAll(req, res) {
+    try {
         const journeyDocuments = await Journey.find()
             .exec()
         res.render("journeys/showAll.ejs", {
             journeys: journeyDocuments,
         });
-    }catch(err){
+    } catch (err) {
         res.send(err)
     }
 }
 
-async function deleteJourney(req, res){
+async function deleteJourney(req, res) {
     try {
         const journeyDocument = await Journey.findById(req.params.id)
         if (!journeyDocument) return res.redirect('/journeys');
-    journeyDocument.remove()
+        journeyDocument.remove()
         res.redirect(`/journeys`)
-      } catch(err) {
+    } catch (err) {
         console.log(err)
         res.send(err)
-      }
+    }
 }
