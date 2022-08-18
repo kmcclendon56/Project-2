@@ -25,7 +25,7 @@
 ## How To Use App
 #### First, log in with your Google email. Then, press Add New Journey and fill out the form. After, you can look at all the journeys you have added by pressing 
 ## Deployment Link
-https://kmcclendon56.github.io/Tamagotchi/
+https://expectedjourney.herokuapp.com/
 ## Future Improvements
 * Add functions for planning trips.
 * Add a list function for future trips.
