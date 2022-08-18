@@ -149,3 +149,7 @@ main img{
   justify-content: center;
 
 }
+
+button{
+  background-image: linear-gradient(#bcbcbc ,#e7e9ec);
+}
