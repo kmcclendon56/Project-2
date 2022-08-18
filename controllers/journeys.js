@@ -51,8 +51,6 @@ async function deleteJourney(req, res){
         const journeyDocument = await Journey.findById(req.params.id)
         if (!journeyDocument) return res.redirect('/journeys');
     journeyDocument.remove()
-        // Journey.remove({journey_id: req.params.id}).exec()
-  
         res.redirect(`/journeys`)
       } catch(err) {
         console.log(err)
