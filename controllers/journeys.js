@@ -1,11 +1,13 @@
 const Journey = require("../models/journey");
 const user = require("../models/user");
+const blogs = require("./blogs");
 
 
 module.exports = {
     show,
     showAll,
-    createBlog
+    createBlog,
+    delete: deleteJourney
 }
 
 async function createBlog (req, res){
@@ -42,4 +44,18 @@ async function showAll(req, res){
     }catch(err){
         res.send(err)
     }
+}
+
+async function deleteJourney(req, res){
+    try {
+        const journeyDocument = await Journey.findById(req.params.id)
+        if (!journeyDocument) return res.redirect('/journeys');
+    journeyDocument.remove()
+        // Journey.remove({journey_id: req.params.id}).exec()
+  
+        res.redirect(`/journeys`)
+      } catch(err) {
+        console.log(err)
+        res.send(err)
+      }
 }

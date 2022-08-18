@@ -6,7 +6,8 @@ const isLoggedIn = require('../config/auth');
 
 router.post('/:id/blogs', isLoggedIn, journeyController.createBlog)
 router.get('/:id', isLoggedIn, journeyController.show);
-router.get('/', isLoggedIn, journeyController.showAll)
+router.get('/', isLoggedIn, journeyController.showAll);
+router.delete('/:id', isLoggedIn, journeyController.delete);
 
 
 

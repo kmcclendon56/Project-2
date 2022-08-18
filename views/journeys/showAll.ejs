@@ -8,8 +8,11 @@
 <% journeys.forEach(journey => { %>
     <a class="where" href="/journeys/<%= journey._id %>"><%= journey.where%></a>
     <img src="<%= journey.image%>" alt="image" href="/journeys/<%= journey._id %>" style="width: 200px; height: 200px;">
+    <form action="/journeys/<%= journey._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Journey</button>
+        </form>
+    
 <% }) %>
 </div>
-
 
   
