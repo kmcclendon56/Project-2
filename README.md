@@ -26,6 +26,7 @@
 ## Deployment Link
 https://expectedjourney.herokuapp.com/
 ## Future Improvements
+* Make deleting jouneys only for logged in user
 * Add functions for planning trips.
 * Add a list function for future trips.
 * Move the edit blog and delete blog buttons.
