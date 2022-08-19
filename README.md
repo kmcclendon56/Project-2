@@ -22,7 +22,7 @@
 * Bootstrap
 
 ## How To Use App
-#### First, log in with your Google email. Then, press Add New Journey and fill out the form. After, you can look at all the journeys you have added by pressing 
+#### First, log in with your Google email. Then, press Add New Journey and fill out the form. After, you can look at all the journeys you have added by pressing Journeys. You can then add, edit, and delete a blog post.
 ## Deployment Link
 https://expectedjourney.herokuapp.com/
 ## Future Improvements
