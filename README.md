@@ -10,9 +10,8 @@
 ![](https://i.imgur.com/UAsJd82.png)
 ![](https://i.imgur.com/BMUOcZ8.png)
 ![](https://i.imgur.com/KNwwMnZ.png)
-![](https://i.imgur.com/rtF7Ccb.png)
 ![](https://i.imgur.com/ImWVa7G.png)
-
+![](https://i.imgur.com/hU49p3Z.png)
 ## Tech Used
 * Javascript
 * HTML
