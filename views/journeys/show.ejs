@@ -27,14 +27,19 @@
                 <h3>
                     <%= blog.userName %>
                 </h3>
+
                 <form action="/blogs/<%= blog._id %>" method="POST">
                     <textarea
                         rows="5" cols="60" name="content" value="<%= blog.content %>" style="margin-top: 1vw; margin-left: 35vw;"><%= blog.content %></textarea> <br>
                     <br>
+                    <% if (user._id.equals(blog.user)) { %>
                     <button style="margin-left: 45vw;" type="submit">Update Blog Entry</button>
+                    <% } %>
                 </form>
+                <% if (user._id.equals(blog.user)) { %>
                 <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
                     <button style="margin-left: 45vw; margin-top: 1vw;" type="submit">Delete Blog Post</button>
                 </form>
+                <% } %>
         </div>
         <% }) %>

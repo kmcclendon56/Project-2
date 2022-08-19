@@ -13,6 +13,8 @@ module.exports = {
 async function createBlog(req, res) {
     try {
         const journeyDocument = await Journey.findById(req.params.id)
+        req.body.user = req.user._id;
+        req.body.userName = req.user.name;
         journeyDocument.blogs.addToSet(req.body);
         journeyDocument.save();
         res.redirect(`/journeys/${journeyDocument._id}`);

@@ -3,7 +3,7 @@
 ## Planning Phase
 ![](https://i.imgur.com/ma8crNo.png)
 ![](https://i.imgur.com/iI2jjEe.png)
-![](https://i.imgur.com/X6ffqyv.png)
+
 
 
 ## Screen Shots of App
